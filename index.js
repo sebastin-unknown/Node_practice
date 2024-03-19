@@ -20,7 +20,9 @@ app.use(express.static(path.join(__dirname,'public')))
 
 
 app.get('/ejs',(req,res)=>{
-    res.render("index1",{Headers:'Let me tell you a small',body:'this is body part'})
+    const data = {name1:"sebastin",name2:"austin",name3:"justin"}
+    console.log(data.name1)
+    res.render("index1",{Headers:'Let me tell you a small',body:'this is body part',data})
    })
 
 
