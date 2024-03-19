@@ -8,7 +8,8 @@ const path = require("path")
 
 
 
-app.set('view engine','pug')
+
+app.set('view engine','ejs')
 app.use('/admin',routerdata)
 app.use(routershop)
 app.use(express.static(path.join(__dirname,'public')))
@@ -18,6 +19,11 @@ app.use(express.static(path.join(__dirname,'public')))
 app.get('/index',(req,res)=>{
  res.render("index",{Headers:'Let me tell you a small',body:'this is body part'})
 })
+
+
+app.get('/ejs',(req,res)=>{
+    res.render("index1",{Headers:'Let me tell you a small',body:'this is body part'})
+   })
 
 
 app.use((req,res,next)=>{
