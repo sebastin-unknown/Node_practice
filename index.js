@@ -16,9 +16,7 @@ app.use(express.static(path.join(__dirname,'public')))
 
 
 
-app.get('/index',(req,res)=>{
- res.render("index",{Headers:'Let me tell you a small',body:'this is body part'})
-})
+
 
 
 app.get('/ejs',(req,res)=>{
