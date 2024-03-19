@@ -28,12 +28,12 @@ app.use((req,res,next)=>{
 app.use(bodyParser.urlencoded({extended:true}))
 
 
+const PORT = process.env.PORT || 4500;
 
 
 
 
-
-app.listen(4500)
+app.listen(PORT,() => console.log("Server is running on port 4500"))
 
 
 
